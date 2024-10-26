@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	Scanner scan = new Scanner(System.in);
+	
+	double a;
+	System.out.println("Enter the coefficent for A:");
+	a = scan.nextDouble();
+	
+	double b;
+	System.out.println("Enter the linear coefficent for B:");
+	b = scan.nextDouble();
+	
+	double c;
+	System.out.println("Enter the coefficent for C:");
+	c = scan.nextDouble();
+	
+	double x1 = (-b + Math.sqrt((Math.pow(b,2)) - (4*a*c))) / (2*a);
+	double x2 = (-b - Math.sqrt((Math.pow(b,2)) - (4*a*c))) / (2*a);
+	
+	
+	System.out.println("The 0's for the polynomial are:" + x1 + "," + x2);
+	
+	double check1 = (a*Math.pow(x1,2)) + (x1*b) + (c);
+	double check2 = (a*Math.pow(x2,2)) + (x2*b) + (c);
+	
+	System.out.println(" Jus to make sure, the 0's of the polynomial are:" + check1 + "," + check2);
+	}
+}
